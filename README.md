@@ -102,29 +102,29 @@ Without the JDK, Java source code **cannot be compiled or executed**.
 
 ### ⚖️ OpenJDK vs Oracle JDK
 
-#### OpenJDK
+**OpenJDK**
 - Open-source and free
 - Community-supported
 - Widely used in development and production
 - **Recommended choice**
 
-#### Oracle JDK
+**Oracle JDK**
 - Commercial license
 - Subscription required for long-term support
 - Used mainly in enterprise environments
 
 ---
 
-### 💻 Installation on Windows, macOS, and Linux
+### 💻 Installation on Windows and macOS
 
-#### Windows
+**Windows**
 1. Download the JDK `.exe` installer
 2. Run the installer and follow setup instructions
 3. Default installation directory:
 ```text
 C:\Program Files\Java\
 ```
-#### macOS
+**MacOS**
 1.Download the `.dmg` or `.pkg` installer
 2.Follow installation steps
 3.Installed under:
