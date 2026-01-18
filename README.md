@@ -122,6 +122,210 @@ This tutorial is ideal for:
 ➡️ **Java Installation & Environment Setup**  
 ➡️ **Your First Java Program – Hello World**
 
+<details>
+<summary>🟢 Beginner Level</summary>
+
+
+
+### Java Installation & Environment Setup
+- Java Development Kit (JDK) overview
+- OpenJDK vs Oracle JDK
+- Installation on Windows, macOS, Linux
+- Environment variables (`JAVA_HOME`, `PATH`)
+- Installation verification
+- Common setup issues
+
+---
+
+### First Java Program – Hello World
+- Java program structure
+- `class` and `main` method
+- Compilation and execution flow
+- Console output
+
+---
+
+### Variables & Data Types
+- Primitive data types
+- Non-primitive data types
+- Variable declaration and initialization
+- Type casting
+
+---
+
+### Operators
+- Arithmetic operators
+- Relational operators
+- Logical operators
+- Assignment operators
+- Unary and ternary operators
+
+---
+
+### Control Statements
+- `if`, `if-else`
+- `switch`
+- Decision-making flow
+
+---
+
+### Loops
+- `for` loop
+- `while` loop
+- `do-while` loop
+- `break` and `continue`
+
+</details>
+
+---
+
+<details>
+<summary>🟡 Intermediate Level</summary>
+
+### Object-Oriented Programming (OOP)
+- Classes and Objects
+- Constructors
+- `this` and `static` keywords
+
+#### Inheritance
+- Types of inheritance
+- Method overriding
+- `super` keyword
+
+#### Polymorphism
+- Compile-time polymorphism
+- Runtime polymorphism
+- Method overloading vs overriding
+
+#### Abstraction
+- Abstract classes
+- Interfaces
+- Functional interfaces
+
+#### Encapsulation
+- Access modifiers
+- Getters and setters
+- Data hiding
+
+---
+
+### Strings
+- String immutability
+- `String` vs `StringBuilder` vs `StringBuffer`
+- Common string methods
+
+---
+
+### Arrays
+- One-dimensional arrays
+- Multi-dimensional arrays
+- Array utilities
+
+---
+
+### Collections Framework
+- List (`ArrayList`, `LinkedList`)
+- Set (`HashSet`, `TreeSet`)
+- Map (`HashMap`, `TreeMap`)
+- Iteration techniques
+
+---
+
+### Exception Handling
+- Checked vs unchecked exceptions
+- `try-catch-finally`
+- `throw` vs `throws`
+- Custom exceptions
+
+</details>
+
+---
+
+<details>
+<summary>🔵 Advanced Level</summary>
+
+### Multithreading & Concurrency
+- Thread lifecycle
+- Creating threads
+- Synchronization
+- Executor framework
+- Concurrency utilities
+
+---
+
+### Java 8+ Features
+- Lambda expressions
+- Streams API
+- Functional interfaces
+- Method references
+- Optional class
+- Date & Time API
+
+---
+
+### File Handling
+- File class
+- Reading and writing files
+- Serialization and deserialization
+- NIO overview
+
+---
+
+### JDBC
+- JDBC architecture
+- Database connectivity
+- CRUD operations
+- Prepared statements
+- Connection pooling
+
+---
+
+### Design Patterns
+- Singleton
+- Factory
+- Builder
+- Observer
+- Best practices
+
+</details>
+
+---
+
+<details>
+<summary>🔴 Interview & Real-World</summary>
+
+### Java Interview Questions
+- Core Java questions
+- OOP interview questions
+- Collections interview questions
+- Multithreading interview questions
+
+---
+
+### Coding Problems
+- String-based problems
+- Array-based problems
+- Logical problems
+- Time & space complexity
+
+---
+
+### Best Practices
+- Clean code principles
+- Exception handling best practices
+- Performance optimization
+- Memory management
+
+---
+
+### Performance Optimization
+- JVM memory model
+- Garbage collection
+- Profiling tools
+- Common performance pitfalls
+
+</details>
+
 Happy Coding! 🚀
 
 
