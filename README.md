@@ -1,4 +1,6 @@
-# Java-Essentials
+# 📚Java-Essentials
+
+---
 
 # ☕ Introduction to Java
 
@@ -56,53 +58,6 @@ Java powers many real-world applications such as:
 - **Java ME** – Embedded systems
 
 ---
-
-## 📚 Java Essentials – Learning Roadmap
-
-<details>
-<summary>📂 Click to expand Java Essentials Topics</summary>
-
-### 🟢 Beginner Level
-- Java Installation & Setup
-- First Java Program (Hello World)
-- Variables & Data Types
-- Operators
-- Control Statements
-- Loops
-
-### 🟡 Intermediate Level
-- Object-Oriented Programming (OOP)
-  - Classes & Objects
-  - Inheritance
-  - Polymorphism
-  - Abstraction
-  - Encapsulation
-- Strings
-- Arrays
-- Collections Framework
-- Exception Handling
-
-### 🔵 Advanced Level
-- Multithreading & Concurrency
-- Java 8+ Features
-  - Lambda Expressions
-  - Streams API
-  - Functional Interfaces
-  - Optional
-- File Handling
-- JDBC
-- Design Patterns
-
-### 🔴 Interview & Real-World
-- Java Interview Questions
-- Common Coding Problems
-- Best Practices
-- Performance Optimization Tips
-
-</details>
-
----
-
 ## Who Should Learn Java?
 This tutorial is ideal for:
 - Beginners learning Java from scratch
@@ -118,22 +73,98 @@ This tutorial is ideal for:
 
 ---
 
-## What’s Next?
-➡️ **Java Installation & Environment Setup**  
-➡️ **Your First Java Program – Hello World**
+# 📚 Java Essentials – Learning Roadmap
+
+
+
+
+
+
+## 🟢 Beginner Level
 
 <details>
-<summary>🟢 Beginner Level</summary>
+<summary>1.Java Installation & Environment Setup</summary>
+
+
+### 📦 Java Development Kit (JDK) Overview
+
+The **Java Development Kit (JDK)** is required to **develop, compile, and run Java applications**.
+
+It includes:
+- **Java Compiler (`javac`)** – converts source code into bytecode
+- **Java Runtime (`java`)** – executes compiled bytecode
+- **Core Java libraries** – standard APIs
+- **Development tools** – debugging and monitoring utilities
+
+Without the JDK, Java source code **cannot be compiled or executed**.
 
 
 
-### Java Installation & Environment Setup
-- Java Development Kit (JDK) overview
-- OpenJDK vs Oracle JDK
-- Installation on Windows, macOS, Linux
-- Environment variables (`JAVA_HOME`, `PATH`)
-- Installation verification
-- Common setup issues
+### ⚖️ OpenJDK vs Oracle JDK
+
+#### OpenJDK
+- Open-source and free
+- Community-supported
+- Widely used in development and production
+- **Recommended choice**
+
+#### Oracle JDK
+- Commercial license
+- Subscription required for long-term support
+- Used mainly in enterprise environments
+
+---
+
+### 💻 Installation on Windows, macOS, and Linux
+
+#### Windows
+1. Download the JDK `.exe` installer
+2. Run the installer and follow setup instructions
+3. Default installation directory:
+```text
+C:\Program Files\Java\
+```
+#### macOS
+1.Download the `.dmg` or `.pkg` installer
+2.Follow installation steps
+3.Installed under:
+```text
+/Library/Java/JavaVirtualMachines
+```
+
+### ⚙️ Environment Variables (JAVA_HOME & PATH)
+Environment variables allow the operating system to locate Java tools globally.
+
+`JAVA_HOME` → Path to the JDK installation directory
+
+`PATH` → Enables running Java commands from any directory
+
+Example (Linux/macOS)
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+```
+### ✅ Installation Verification
+Verify the Java installation using the following commands:
+
+```bash
+java -version
+javac -version
+```
+Expected output:
+```text
+openjdk version "17"
+javac 17
+```
+### ⚠️ Common Setup Issues
+java command not found → PATH is not configured correctly
+
+Incorrect Java version → Multiple JDKs installed
+
+Permission issues → Insufficient installation rights
+
+</details>
+
 
 ---
 
@@ -174,8 +205,6 @@ This tutorial is ideal for:
 - `while` loop
 - `do-while` loop
 - `break` and `continue`
-
-</details>
 
 ---
 
