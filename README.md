@@ -163,10 +163,11 @@ Incorrect Java version → Multiple JDKs installed
 
 Permission issues → Insufficient installation rights
 
+---
 </details>
 
 
----
+
 
 <details>
 <summary>2. First Java Program – Hello World</summary>
@@ -252,10 +253,10 @@ Hello, World!
 
 -```System.out.println()``` displays output on the console
 
-
+---
   
 </details>
----
+
 
 <details>
 <summary>3. Variables & Data Types</summary>
