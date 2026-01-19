@@ -349,19 +349,192 @@ int y = (int) x;
 
 ---
 
-### Operators
-- Arithmetic operators
-- Relational operators
-- Logical operators
-- Assignment operators
-- Unary and ternary operators
+<details>
+<summary>5.Operators</summary>
+
+Operators are symbols used to perform operations on variables and values.
+---
+
+### ➕ Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `+` | Addition | `a + b` |
+| `-` | Subtraction | `a - b` |
+| `*` | Multiplication | `a * b` |
+| `/` | Division | `a / b` |
+| `%` | Modulus | `a % b` |
 
 ---
 
-### Control Statements
-- `if`, `if-else`
-- `switch`
-- Decision-making flow
+### 🔍 Relational Operators
+
+Relational operators are used to compare two values and return a boolean result.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `==` | Equal to | `a == b` |
+| `!=` | Not equal to | `a != b` |
+| `>` | Greater than | `a > b` |
+| `<` | Less than | `a < b` |
+| `>=` | Greater than or equal to | `a >= b` |
+| `<=` | Less than or equal to | `a <= b` |
+
+---
+
+### 🔗 Logical Operators
+
+Logical operators are used to combine boolean expressions.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `&&` | Logical AND | `a > 0 && b > 0` |
+| `||` | Logical OR | `a > 0 || b > 0` |
+| `!` | Logical NOT | `!flag` |
+
+---
+
+### 📝 Assignment Operators
+
+Assignment operators are used to assign values to variables.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `=` | Assign | `a = 10` |
+| `+=` | Add and assign | `a += 5` |
+| `-=` | Subtract and assign | `a -= 5` |
+| `*=` | Multiply and assign | `a *= 2` |
+| `/=` | Divide and assign | `a /= 2` |
+| `%=` | Modulus and assign | `a %= 2` |
+
+---
+
+### 🔄 Unary and Ternary Operators
+
+#### Unary Operators
+Operate on a single operand.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `+` | Unary plus | `+a` |
+| `-` | Unary minus | `-a` |
+| `++` | Increment | `a++` |
+| `--` | Decrement | `a--` |
+| `!` | Logical NOT | `!flag` |
+
+#### Ternary Operator
+A shorthand for `if-else` condition.
+
+Syntax:
+```java
+condition ? expression1 : expression2;
+```
+Example:
+```java
+int max = (a > b) ? a : b;
+```
+---
+</details>
+
+<details>
+<summary>6.Control Statements</summary>
+
+Control statements are used to **control the flow of execution** of a program based on conditions.
+
+---
+
+### 🔀 `if` and `if-else` Statements
+
+The `if` statement executes a block of code when a condition is true.
+
+**Syntax (`if`)**
+```java
+if (condition) {
+    // code to execute
+}
+```
+
+**Syntax (if-else)**
+```java
+if (condition) {
+    // code if condition is true
+} else {
+    // code if condition is false
+}
+```
+
+
+**Example**
+```java
+int age = 18;
+
+if (age >= 18) {
+    System.out.println("Eligible to vote");
+} else {
+    System.out.println("Not eligible to vote");
+}
+```
+### 🔁 switch Statement
+
+The switch statement allows multiple conditions to be tested using a single variable.
+
+#### Syntax
+```java
+switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // default code
+}
+```
+
+#### Example
+```java
+
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+```
+
+### 🔄 Decision-Making Flow
+
+- Conditions are evaluated from top to bottom
+
+- Based on the condition result (`true` or `false`), specific code blocks are executed
+
+- `if-else` is used for **range-based conditions**
+
+- `switch` is used for **fixed values**
+
+### 📌 Key Points
+
+- Control statements guide program execution
+
+- `if-else` is suitable for conditional logic
+
+- `switch` is useful for multiple fixed choices
+
+- `break` prevents fall-through in switch cases
+
+</details>
 
 ---
 
