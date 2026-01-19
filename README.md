@@ -252,10 +252,10 @@ Hello, World!
 
 -```System.out.println()``` displays output on the console
 
----
+
   
 </details>
-
+---
 
 <details>
 <summary>3. Variables & Data Types</summary>
@@ -348,9 +348,10 @@ int y = (int) x;
 - Casting allows type conversion between compatible data types
 
 ---
+</details>
 
 <details>
-<summary>5.Operators</summary>
+<summary>4.Operators</summary>
 
 Operators are symbols used to perform operations on variables and values.
 ---
@@ -439,7 +440,7 @@ int max = (a > b) ? a : b;
 </details>
 
 <details>
-<summary>6.Control Statements</summary>
+<summary>5.Control Statements</summary>
 
 Control statements are used to **control the flow of execution** of a program based on conditions.
 
@@ -536,15 +537,121 @@ switch (day) {
 
 </details>
 
+
+
+<details>
+<summary>6.Loops</summary>
+
+Loops are used to **execute a block of code repeatedly** based on a condition.
+
 ---
 
-### Loops
-- `for` loop
-- `while` loop
-- `do-while` loop
-- `break` and `continue`
+### 🔁 `for` Loop
 
----
+The `for` loop is used when the number of iterations is known.
+
+**Syntax**
+```java
+for (initialization; condition; increment/decrement) {
+    // code to execute
+}
+```
+#### Example
+
+```java
+Copy code
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+### 🔄 while Loop
+The `while` loop executes as long as the condition remains true.
+
+#### Syntax
+
+```java
+Copy code
+while (condition) {
+    // code to execute
+}
+```
+#### Example
+
+```java
+Copy code
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+### 🔃 do-while Loop
+The `do-while` loop executes **at least once**, even if the condition is false.
+
+#### Syntax
+
+```java
+
+do {
+    // code to execute
+} while (condition);
+```
+
+#### Example
+
+```java
+
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+#### ⛔ `break` and `continue`
+`break`
+
+- Terminates the loop immediately
+
+```java
+Copy code
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        break;
+    }
+    System.out.println(i);
+}
+```
+`continue`
+
+- Skips the current iteration and moves to the next one
+
+```java
+
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    System.out.println(i);
+}
+```
+### 📌 Key Points
+- Loops reduce code repetition
+
+- `for loop` is ideal when iteration count is known
+
+- `while` loop is condition-based
+
+- `do-while` loop executes at least once
+
+- `break` exits the loop
+
+- `continue` skips the current iteration
+</details>
+
 
 <details>
 <summary>🟡 Intermediate Level</summary>
