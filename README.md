@@ -168,19 +168,184 @@ Permission issues → Insufficient installation rights
 
 ---
 
-### First Java Program – Hello World
-- Java program structure
-- `class` and `main` method
-- Compilation and execution flow
-- Console output
+<details>
+<summary>2. First Java Program – Hello World</summary>
+  
+### 🧱 Java Program Structure 
+A Java program is built using **classes and methods**. 
+Every Java application must contain **at least one class**, and execution always begins from the main method. 
+#### Basic structure of a Java program:
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+### 🧩 class and main Method
+
+**Class**
+
+- A class is the basic building block of a Java program
+
+- It acts as a blueprint for objects
+
+- The class name must match the file name
+
+**Example:**
+```text
+HelloWorld.java
+```
+
+**main** Method
+
+- Entry point of every Java program
+
+- Program execution starts from this method
+
+- Required syntax:
+
+```java 
+public static void main(String[] args)
+```
+
+### 🔄 Compilation and Execution Flow
+
+**1.Write the source code**
+
+-Save the file as:
+```text
+HelloWorld.java
+```
+
+**2.Compile the program**
+
+- Converts source code into bytecode
+```bash
+javac HelloWorld.java
+```
+
+**3.Execute the program**
+
+- Runs the compiled bytecode using JVM
+```bash
+java HelloWorld
+```
+### 🖥️ Console Output
+
+The output is printed using:
+```java
+System.out.println("Hello, World!");
+```
+
+Output on the console:
+```java
+Hello, World!
+```
+### 📌 Key Points
+- Java programs start execution from the ```main``` method
+
+- File name and class name must be the same
+
+- Compilation and execution are two separate steps
+
+-```System.out.println()``` displays output on the console
 
 ---
+  
+</details>
 
-### Variables & Data Types
-- Primitive data types
-- Non-primitive data types
-- Variable declaration and initialization
-- Type casting
+
+<details>
+<summary>3. Variables & Data Types</summary>
+
+### 📦 Variables in Java
+
+A **variable** is a container used to store data values.  
+Each variable in Java must be declared with a **data type** before it can be used.
+
+Example:
+```java
+int number = 10;
+```
+### 🔢 Primitive Data Types
+
+Primitive data types store **simple values directly in memory**.
+
+| Data Type | Size    | Example |
+|----------|---------|---------|
+| `int`    | 4 bytes | `int a = 10;` |
+| `float`  | 4 bytes | `float b = 5.5f;` |
+| `double` | 8 bytes | `double d = 99.99;` |
+| `char`   | 2 bytes | `char c = 'A';` |
+| `boolean`| 1 bit   | `boolean flag = true;` |
+| `byte`   | 1 byte  | `byte x = 100;` |
+| `short`  | 2 bytes | `short s = 200;` |
+| `long`   | 8 bytes | `long l = 100000L;` |
+
+### 🧩 Non-Primitive Data Types
+
+Non-primitive data types store **references to objects** rather than actual values.
+
+#### Examples include:
+- `String`
+- Arrays
+- Classes
+- Interfaces
+
+#### Example:
+
+```java
+String name = "Java";
+int[] numbers = {1, 2, 3};
+```
+### ✍️ Variable Declaration and Initialization
+
+#### Declaration
+
+```java
+int x;
+```
+#### Initialization
+```java
+x = 5;
+```
+#### Declaration + Initialization
+```java
+int y = 10;
+```
+
+### 🔁 Type Casting
+
+Type casting is used to convert one data type into another.
+
+#### Implicit Casting (Widening)
+- Automatic conversion
+- Smaller type → larger type
+
+```java
+int a = 10;
+double b = a;
+```
+#### Explicit Casting (Narrowing)
+- Manual conversion
+
+- Larger type → smaller type
+
+```java
+
+double x = 10.5;
+int y = (int) x;
+```
+
+### 📌 Key Points
+
+- Variables must be declared before use
+- Java is a **strongly typed language**
+- Primitive types store values directly
+- Non-primitive types store object references
+- Casting allows type conversion between compatible data types
 
 ---
 
