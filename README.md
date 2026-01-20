@@ -1406,9 +1406,6 @@ try {
 }
 ```
 
-
-</details>
-
 ## `throw` vs `throws`
 
 ### `throw`
@@ -1481,18 +1478,212 @@ class Test {
 ---
 </details>
 
-
+## 🔵 Advanced Level
 <details>
-<summary>🔵 Advanced Level</summary>
+<summary>1.Multithreading & Concurrency</summary>
 
-### Multithreading & Concurrency
-- Thread lifecycle
-- Creating threads
-- Synchronization
-- Executor framework
-- Concurrency utilities
+**Multithreading** allows a Java program to perform **multiple tasks simultaneously** by running multiple threads at the same time.  
+**Concurrency** is the ability of a program to deal with multiple tasks logically at once, improving performance and responsiveness.
 
 ---
+
+## Thread Lifecycle
+
+A thread goes through several states during its execution.
+
+### Thread States
+1. **New** – Thread is created but not started
+2. **Runnable** – Thread is ready to run
+3. **Running** – Thread is executing
+4. **Blocked / Waiting** – Thread is waiting for a resource or signal
+5. **Terminated** – Thread execution is complete
+
+---
+
+## Creating Threads
+
+In Java, threads can be created in **two ways**.
+
+---
+
+### 1. Extending the `Thread` Class
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+MyThread t = new MyThread();
+t.start();
+```
+### 2. Implementing the Runnable Interface (Recommended)
+```java
+class MyTask implements Runnable {
+    public void run() {
+        System.out.println("Runnable thread running");
+    }
+}
+
+Thread t = new Thread(new MyTask());
+t.start();
+```
+
+
+**Why Runnable is preferred:**
+
+- Supports multiple inheritance
+
+- Better design and flexibility
+
+## Synchronization
+
+**Synchronization** is used to control access to **shared resources** and prevent data inconsistency.
+
+Without synchronization, multiple threads may access and modify the same data simultaneously, leading to **race conditions**.
+
+---
+
+### Synchronized Method Example
+
+```java
+class Counter {
+    private int count = 0;
+
+    synchronized void increment() {
+        count++;
+    }
+}
+```
+#### Synchronized Block Example
+```java
+synchronized (this) {
+    count++;
+}
+```
+
+#### Benefits of Synchronization
+
+- Prevents race conditions
+
+- Ensures thread safety
+
+- Maintains data consistency
+
+## Executor Framework
+
+The **Executor Framework** manages thread creation and execution automatically.
+
+Instead of creating threads manually, **tasks are submitted to an executor**, which handles thread pooling and scheduling.
+
+---
+
+### Example Using `ExecutorService`
+
+```java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+ExecutorService executor = Executors.newFixedThreadPool(2);
+
+executor.submit(() -> {
+    System.out.println("Task executed by thread pool");
+});
+
+executor.shutdown();
+```
+
+### Advantages of Executor Framework
+
+- Better performance
+- Thread reuse
+- Easy task management
+- Simplifies multithreaded programming
+
+---
+
+## Concurrency Utilities
+
+Java provides powerful concurrency utilities in the  
+**`java.util.concurrent`** package.
+
+---
+
+### Common Concurrency Utilities
+
+---
+
+### 1. Callable and Future
+
+Used when a task needs to **return a result**.
+
+```java
+Callable<Integer> task = () -> 10 + 20;
+Future<Integer> result = executor.submit(task);
+```
+
+### 2. Locks
+
+Locks provide **more control and flexibility** than the `synchronized` keyword.
+
+They allow:
+- Explicit locking and unlocking
+- Better control over thread execution
+- Advanced features like try-lock and fairness policies
+
+#### Example
+```java
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+Lock lock = new ReentrantLock();
+lock.lock();
+try {
+    // critical section
+} finally {
+    lock.unlock();
+}
+```
+### 3. Atomic Variables
+
+Atomic variables are used for **thread-safe operations without explicit synchronization**.
+
+They provide **lock-free thread safety** and better performance in concurrent environments.
+
+#### Example
+```java
+import java.util.concurrent.atomic.AtomicInteger;
+
+AtomicInteger count = new AtomicInteger(0);
+count.incrementAndGet();
+```
+### 4. Concurrent Collections
+
+Concurrent collections are **thread-safe versions of standard collections**, designed for **high-performance concurrent access**.
+
+They allow multiple threads to read and write data safely **without external synchronization**.
+
+#### Examples
+- `ConcurrentHashMap`
+- `CopyOnWriteArrayList`
+
+These collections are optimized for concurrent environments and help avoid common concurrency issues such as race conditions.
+
+---
+
+### Key Points to Remember
+
+- Multithreading improves performance and responsiveness
+- Threads have a defined lifecycle
+- Synchronization ensures thread safety
+- Executor Framework simplifies thread management
+- Concurrency utilities provide advanced control and performance
+
+---
+</details>
+
+
 
 ### Java 8+ Features
 - Lambda expressions
