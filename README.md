@@ -996,12 +996,124 @@ System.out.println(str.substring(1, 5));
 ---
 </details>
 
-### Arrays
-- One-dimensional arrays
-- Multi-dimensional arrays
-- Array utilities
+<details>
+  <summary>Arrays</summary>
+
+An **array** in Java is a data structure used to store **multiple values of the same data type** in a single variable.  
+Arrays are **fixed in size**, meaning their length cannot change once created.
 
 ---
+
+## One-Dimensional Arrays
+
+A one-dimensional array stores elements in a **single row**.
+
+### Declaration
+```java
+int[] numbers;
+```
+### Array Initialization
+
+Arrays can be initialized at the time of declaration using curly braces `{}`.
+
+```java
+int[] numbers = {1, 2, 3, 4, 5};
+```
+### Accessing Array Elements
+
+Array elements are accessed using their **index**, starting from `0`.
+
+```java
+int first = numbers[0];
+int last = numbers[numbers.length - 1];
+```
+### Iterating Through an Array
+
+You can iterate through an array using a `for` loop.
+
+```java
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+```
+## Multi-Dimensional Arrays
+
+A multi-dimensional array stores data in the form of **rows and columns**.  
+It is essentially an **array of arrays**.
+
+---
+
+### Declaration and Initialization
+
+```java
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+```
+### Accessing Elements
+
+Array elements are accessed using **row and column indices**.
+
+```java
+int value = matrix[1][2]; // Output: 6
+```
+### Iterating Through a 2D Array
+
+You can iterate through a two-dimensional array using **nested `for` loops**.
+
+```java
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+## Array Utilities
+
+Java provides utility methods through the **`Arrays` class** (`java.util.Arrays`) to perform common array operations.
+
+---
+
+### Commonly Used Methods
+
+- `Arrays.sort()` – sorts the array
+- `Arrays.toString()` – converts an array to a string
+- `Arrays.equals()` – compares two arrays
+- `Arrays.copyOf()` – creates a copy of an array
+- `Arrays.binarySearch()` – searches for an element in a sorted array
+
+---
+
+### Examples
+
+```java
+import java.util.Arrays;
+
+int[] arr = {5, 2, 9, 1};
+
+// Sorting
+Arrays.sort(arr);
+
+// Printing
+System.out.println(Arrays.toString(arr));
+
+// Searching
+int index = Arrays.binarySearch(arr, 5);
+```
+### Key Points to Remember
+
+- Arrays store **fixed-size** collections of elements
+- Indexing starts from **0**
+- All elements must be of the **same data type**
+- Multi-dimensional arrays are **arrays of arrays**
+- The `Arrays` utility class simplifies common operations
+
+
+---
+
+</details>
 
 ### Collections Framework
 - List (`ArrayList`, `LinkedList`)
