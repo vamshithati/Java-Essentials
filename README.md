@@ -883,12 +883,118 @@ Functional interfaces are used heavily in **lambda expressions.**
 
 
 
-### Strings
-- String immutability
-- `String` vs `StringBuilder` vs `StringBuffer`
-- Common string methods
+<details>
+  <summary>2.Strings</summary>
+
+In Java, a **String** is an object that represents a sequence of characters.  
+Strings are widely used for storing and manipulating text data.
 
 ---
+
+#### String Immutability
+
+In Java, **String objects are immutable**, meaning **once a String is created, it cannot be changed**.
+
+If you modify a String, Java actually creates a **new String object** instead of changing the existing one.
+
+**Example:**
+```java
+String s = "Java";
+s = s.concat(" Programming");
+```
+In this example:
+
+- `"Java"` is **not modified**
+- A new String `"Java Programming"` is created
+- `s` now points to the **new object**
+
+---
+
+#### Why Immutability Matters
+
+- Improves **security**
+- Makes Strings **thread-safe**
+- Enables **memory optimization** through the String pool
+
+---
+
+### `String` vs `StringBuilder` vs `StringBuffer`
+
+| Feature        | String              | StringBuilder        | StringBuffer          |
+|---------------|---------------------|----------------------|-----------------------|
+| Mutability    | Immutable            | Mutable              | Mutable               |
+| Thread-safe   | Yes                  | No                   | Yes                   |
+| Performance   | Slow (modifications) | Fast                 | Slower than StringBuilder |
+| Introduced in | Java 1.0             | Java 1.5             | Java 1.0              |
+
+---
+
+#### When to Use
+
+- Use **String** when data should not change
+- Use **StringBuilder** when modifying strings frequently (single-threaded)
+- Use **StringBuffer** when thread safety is required
+
+---
+
+#### Example
+
+```java
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");
+System.out.println(sb);
+```
+### When to Use
+
+- Use **String** when data should not change
+- Use **StringBuilder** when modifying strings frequently (single-threaded)
+- Use **StringBuffer** when thread safety is required
+
+---
+
+#### Example
+
+```java
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");
+System.out.println(sb);
+```
+
+### Common String Methods
+
+Below are some commonly used `String` methods in Java:
+
+- `length()` – returns the length of the string
+- `charAt(int index)` – returns the character at a given index
+- `substring(int beginIndex, int endIndex)` – extracts a substring
+- `equals()` – compares string values
+- `equalsIgnoreCase()` – compares strings ignoring case
+- `toUpperCase()` – converts string to uppercase
+- `toLowerCase()` – converts string to lowercase
+- `trim()` – removes leading and trailing spaces
+- `replace()` – replaces characters or substrings
+
+---
+
+#### Example
+
+```java
+String str = " Java Basics ";
+
+System.out.println(str.length());
+System.out.println(str.trim());
+System.out.println(str.toUpperCase());
+System.out.println(str.substring(1, 5));
+```
+### Key Takeaways
+
+- Strings are **immutable** in Java
+- Use **StringBuilder** for better performance when modifying strings
+- Use **StringBuffer** when thread safety is required
+- Java provides **rich built-in methods** for string manipulation
+
+---
+</details>
 
 ### Arrays
 - One-dimensional arrays
