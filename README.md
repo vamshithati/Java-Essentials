@@ -1419,8 +1419,68 @@ try {
 ```java
 throw new ArithmeticException("Invalid operation");
 ```
+### `throws`
+
+- Used in **method declaration**
+- Indicates that a method may **pass the exception to the caller**
+
+#### Example
+```java
+void readFile() throws IOException {
+    FileReader fr = new FileReader("file.txt");
+}
+```
+### Difference Between `throw` and `throws`
+
+| Feature | `throw` | `throws` |
+|------|--------|---------|
+| Usage | Inside method | Method declaration |
+| Purpose | Throws an exception | Declares possible exceptions |
+| Number of exceptions | One at a time | Multiple allowed |
 
 ---
+
+## Custom Exceptions
+
+Custom exceptions are **user-defined exceptions** created by extending the `Exception` class.
+
+---
+
+### Why Use Custom Exceptions?
+
+- Better error handling
+- More meaningful error messages
+- Cleaner and more readable code
+
+---
+
+### Example
+
+```java
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+class Test {
+    static void validateAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above");
+        }
+    }
+}
+```
+### Key Points to Remember
+
+- Exceptions prevent **abnormal program termination**
+- Checked exceptions must be handled at **compile time**
+- Unchecked exceptions occur at **runtime**
+- Use `try-catch-finally` to handle exceptions safely
+
+---
+</details>
+
 
 <details>
 <summary>🔵 Advanced Level</summary>
