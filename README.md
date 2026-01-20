@@ -654,35 +654,234 @@ for (int i = 1; i <= 5; i++) {
 </details>
 
 
+## 🟡 Intermediate Level
+
 <details>
-<summary>🟡 Intermediate Level</summary>
-
-### Object-Oriented Programming (OOP)
-- Classes and Objects
-- Constructors
-- `this` and `static` keywords
-
-#### Inheritance
-- Types of inheritance
-- Method overriding
-- `super` keyword
-
-#### Polymorphism
-- Compile-time polymorphism
-- Runtime polymorphism
-- Method overloading vs overriding
-
-#### Abstraction
-- Abstract classes
-- Interfaces
-- Functional interfaces
-
-#### Encapsulation
-- Access modifiers
-- Getters and setters
-- Data hiding
+<summary>Object-Oriented Programming (OOP)</summary>
 
 ---
+
+## What is Object-Oriented Programming?
+Object-Oriented Programming (OOP) is a programming approach that organizes software design around **objects** rather than functions.
+
+An object represents a real-world entity and contains:
+- **Data** (variables)
+- **Behavior** (methods)
+
+---
+
+## Principles of OOP
+
+---
+
+## 1. Encapsulation
+
+Encapsulation means **binding data and methods together** and restricting direct access to data.
+
+### Key Concepts
+- Data hiding
+- Controlled access using methods
+- Improves security and maintainability
+
+### Access Modifiers
+- `private` – accessible only within the class
+- `protected` – accessible within package and subclasses
+- `public` – accessible everywhere
+- `default` – package-level access
+
+### Example
+```java
+class User {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+## 2. Inheritance
+
+Inheritance allows a class to **acquire properties and behavior of another class**.
+
+### Key Points
+- Promotes **code reuse**
+- Represents an **is-a relationship**
+
+---
+
+### Types of Inheritance
+- **Single inheritance**
+- **Multilevel inheritance**
+- **Hierarchical inheritance**
+
+> Java does **not** support multiple inheritance with classes.
+
+---
+
+### Example
+```java
+class Animal {
+    void eat() {}
+}
+
+class Dog extends Animal {
+    void bark() {}
+}
+```
+
+In this example:
+
+- `Dog` **is an** `Animal`
+- `Dog` inherits the `eat()` method from `Animal`
+
+### `super` Keyword
+
+The `super` keyword is used to refer to the **parent class**.
+
+#### Uses of `super`
+- Access parent class methods
+- Access parent class variables
+- Call the parent class constructor
+
+#### Example
+```java
+class Dog extends Animal {
+    Dog() {
+        super(); // Calls parent class constructor
+    }
+}
+```
+
+---
+
+## 3. Polymorphism
+
+Polymorphism means **one method behaving differently in different situations**.
+
+---
+
+### Types of Polymorphism
+
+#### Compile-time Polymorphism (Method Overloading)
+- Same method name
+- Different parameter list
+- Decision made at compile time
+
+**Example:**
+```java
+int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+```
+In this example:
+
+- The `sound()` method behaves differently based on the object type
+- This demonstrates **runtime polymorphism**
+
+### Runtime Polymorphism (Method Overriding)
+
+Runtime polymorphism occurs when a **subclass provides a specific implementation** of a method that is already defined in its parent class.
+
+#### Key Points
+- Same method signature
+- Different implementation in subclass
+- Decision made at runtime
+
+#### Example
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+```
+### Overloading vs Overriding
+
+| Feature        | Overloading        | Overriding        |
+|---------------|-------------------|------------------|
+| Method name   | Same              | Same             |
+| Parameters    | Different         | Same             |
+| Inheritance   | Not required      | Required         |
+| Decision time | Compile-time      | Runtime          |
+
+---
+
+## 4. Abstraction
+
+Abstraction focuses on **hiding implementation details** and exposing only the **essential behavior** of an object.
+
+---
+
+### Abstract Classes
+- Can have abstract and non-abstract methods
+- Cannot be instantiated
+
+#### Example
+```java
+abstract class Shape {
+    abstract void draw();
+}
+```
+#### Interfaces
+- Supports full abstraction
+
+- All methods are abstract by default
+
+- Java 8+ allows default methods
+
+**Example**
+```java
+
+interface Flyable {
+    void fly();
+}
+```
+#### Functional Interfaces
+A functional interface contains **only one abstract method**.
+
+**Example**
+```java
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+```
+
+Functional interfaces are used heavily in **lambda expressions.**
+
+### Why Use Object-Oriented Programming (OOP)?
+- Improves **code reusability**
+
+- Makes code **easier to maintain**
+
+- Supports **scalability**
+
+- Closely models **real-world problems**
+
+- Encourages **clean and structured design**
+
+
+---
+
+</details>
+
+
+
 
 ### Strings
 - String immutability
