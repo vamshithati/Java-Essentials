@@ -997,7 +997,7 @@ System.out.println(str.substring(1, 5));
 </details>
 
 <details>
-  <summary>Arrays</summary>
+  <summary>3.Arrays</summary>
 
 An **array** in Java is a data structure used to store **multiple values of the same data type** in a single variable.  
 Arrays are **fixed in size**, meaning their length cannot change once created.
@@ -1115,13 +1115,225 @@ int index = Arrays.binarySearch(arr, 5);
 
 </details>
 
-### Collections Framework
-- List (`ArrayList`, `LinkedList`)
-- Set (`HashSet`, `TreeSet`)
-- Map (`HashMap`, `TreeMap`)
-- Iteration techniques
+<details>
+  <summary>4.Collections Framework</summary>
+
+The **Java Collections Framework** provides a set of **classes and interfaces** to store, manipulate, and retrieve groups of objects efficiently.
+
+Unlike arrays, collections:
+- Can grow or shrink dynamically
+- Provide built-in methods for common operations
+- Are widely used in real-world Java applications
 
 ---
+
+## List
+
+A **List** is an ordered collection that:
+- Allows duplicate elements
+- Maintains insertion order
+- Allows access by index
+
+### Common Implementations
+- `ArrayList`
+- `LinkedList`
+
+---
+
+### ArrayList
+- Uses a dynamic array internally
+- Fast for read operations
+- Slower for insertions/deletions in the middle
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+List<String> list = new ArrayList<>();
+list.add("Java");
+list.add("Python");
+list.add("Java");
+
+System.out.println(list);
+```
+
+### LinkedList
+
+`LinkedList` uses a **doubly linked list** internally.
+
+#### Characteristics
+- Faster insertions and deletions
+- Slower random access compared to `ArrayList`
+
+#### Example
+```java
+import java.util.LinkedList;
+import java.util.List;
+
+List<String> list = new LinkedList<>();
+list.add("A");
+list.add("B");
+list.add("C");
+```
+## Set
+
+A **Set** is a collection that:
+- Does **not allow duplicate elements**
+- Does **not provide index-based access**
+
+---
+
+### Common Implementations
+- `HashSet`
+- `TreeSet`
+
+---
+
+### HashSet
+
+#### Characteristics
+- Does not maintain insertion order
+- Fast performance
+- Allows one `null` value
+
+#### Example
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+Set<Integer> set = new HashSet<>();
+set.add(10);
+set.add(20);
+set.add(10); // Duplicate ignored
+
+System.out.println(set);
+```
+### TreeSet
+
+#### Characteristics
+- Stores elements in **sorted order**
+- Does **not allow `null`**
+- Slower than `HashSet`
+
+#### Example
+```java
+import java.util.TreeSet;
+import java.util.Set;
+
+Set<Integer> set = new TreeSet<>();
+set.add(30);
+set.add(10);
+set.add(20);
+
+System.out.println(set); // Sorted output
+```
+## Map
+
+A **Map** stores data in **key-value pairs**.
+
+### Key Points
+- Keys are **unique**
+- Values can be duplicated
+- No direct index-based iteration like `List` or `Set`
+
+---
+
+### Common Implementations
+- `HashMap`
+- `TreeMap`
+
+---
+
+### HashMap
+
+#### Characteristics
+- Does not maintain order
+- Allows **one `null` key**
+- Fast performance
+
+#### Example
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Java");
+map.put(2, "Python");
+
+System.out.println(map);
+```
+### TreeMap
+
+#### Characteristics
+- Stores entries in **sorted order of keys**
+- Does **not allow `null` keys**
+- Slower than `HashMap`
+
+#### Example
+```java
+import java.util.TreeMap;
+import java.util.Map;
+
+Map<Integer, String> map = new TreeMap<>();
+map.put(3, "C");
+map.put(1, "Java");
+map.put(2, "Python");
+
+System.out.println(map);
+```
+## Iteration Techniques
+
+Collections can be iterated using multiple approaches.
+
+---
+
+### 1. For-each Loop
+
+Used to iterate over collections in a simple and readable way.
+
+```java
+for (String item : list) {
+    System.out.println(item);
+}
+```
+### 2. Iterator
+
+The `Iterator` interface provides **more control during iteration** and is especially useful when you need to **remove elements safely** while iterating.
+
+```java
+import java.util.Iterator;
+
+Iterator<String> itr = list.iterator();
+while (itr.hasNext()) {
+    System.out.println(itr.next());
+}
+```
+### 3. forEach (Java 8+)
+
+The `forEach` method uses **lambda expressions** for concise and readable iteration.
+
+```java
+list.forEach(item -> System.out.println(item));
+```
+### 4. Iterating a Map
+
+Maps are iterated using the `entrySet()` method, which provides access to both **keys and values**.
+
+```java
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " : " + entry.getValue());
+}
+```
+### Key Points to Remember
+
+- Collections are **dynamic** (unlike arrays)
+- `List` allows duplicates and maintains order
+- `Set` does not allow duplicates
+- `Map` stores data in **key-value pairs**
+- Choose implementations based on **performance needs**
+---
+
+</details>
 
 ### Exception Handling
 - Checked vs unchecked exceptions
@@ -1129,7 +1341,7 @@ int index = Arrays.binarySearch(arr, 5);
 - `throw` vs `throws`
 - Custom exceptions
 
-</details>
+
 
 ---
 
