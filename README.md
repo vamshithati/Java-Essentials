@@ -1335,13 +1335,90 @@ for (Map.Entry<Integer, String> entry : map.entrySet()) {
 
 </details>
 
-### Exception Handling
-- Checked vs unchecked exceptions
-- `try-catch-finally`
-- `throw` vs `throws`
-- Custom exceptions
+
+<details>
+<summary>5.Exception Handling</summary>
+
+**Exception Handling** in Java is a mechanism used to handle **runtime errors** so that the normal flow of the application is not disrupted.
+
+An **exception** is an event that occurs during program execution and disrupts the normal flow of instructions.
+
+---
+
+## Checked vs Unchecked Exceptions
+
+### Checked Exceptions
+- Checked at **compile time**
+- Must be handled using `try-catch` or declared using `throws`
+- Examples:
+  - `IOException`
+  - `SQLException`
+  - `FileNotFoundException`
+
+```java
+import java.io.FileReader;
+
+FileReader fr = new FileReader("file.txt"); // Compile-time error if not handled
+```
 
 
+### Unchecked Exceptions
+
+Unchecked exceptions are exceptions that occur **at runtime**.
+
+#### Key Characteristics
+- Checked at **runtime**
+- **Not mandatory** to handle
+- Usually caused by **programming errors**
+
+#### Common Examples
+- `NullPointerException`
+- `ArithmeticException`
+- `ArrayIndexOutOfBoundsException`
+
+#### Example
+```java
+int a = 10 / 0; // ArithmeticException
+```
+
+## try-catch-finally
+
+Exception handling in Java is commonly done using the **`try-catch-finally`** block.
+
+### `try`
+- Contains code that **may cause an exception**
+
+### `catch`
+- Handles the exception thrown in the `try` block
+
+### `finally`
+- Always executes, whether an exception occurs or not
+- Commonly used for **cleanup operations**
+
+### Example
+```java
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+} finally {
+    System.out.println("Execution completed");
+}
+```
+
+
+</details>
+
+## `throw` vs `throws`
+
+### `throw`
+- Used to **explicitly throw an exception**
+- Used **inside a method**
+
+#### Example
+```java
+throw new ArithmeticException("Invalid operation");
+```
 
 ---
 
