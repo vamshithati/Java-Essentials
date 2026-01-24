@@ -2,7 +2,6 @@
 
 ---
 
-# ☕ Introduction to Java
 
 ## What is Java?
 Java is a **high-level, object-oriented, platform-independent programming language** widely used for building enterprise applications, web services, mobile apps, and cloud-based systems.
